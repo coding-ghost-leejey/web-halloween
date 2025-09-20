@@ -8,7 +8,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-91WFSMYLG6');
     </script>
     <meta charset="UTF-8">
@@ -21,11 +20,11 @@
 
     <div class="visual-container">
         <header class="page-header">
-            <h1>
+            <h1 class="logo">
                 Halloween
             </h1>
 
-            <select>
+            <select class="lang">
                 <option>한국어</option>
                 <option>English</option>
             </select>
@@ -258,6 +257,15 @@
                 }
             }, 1500); // 1500ms 이내에 스크롤 이벤트가 없으면 실행 
         }  
+    </script>
+    <script>
+
+        document.querySelector('.logo').addEventListener('click', () => {
+            gtag('event', 'click_button', {
+                'name': 'logo click'
+            })
+
+        })
     </script>
 </body>
 
